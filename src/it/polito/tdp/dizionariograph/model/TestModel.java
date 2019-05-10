@@ -8,10 +8,12 @@ public class TestModel {
 		
 		Model model = new Model();
 		
-		model.createGraph(4);
-		System.out.println(String.format("**Grafo creato**\n"));
+		long start = System.currentTimeMillis();
+		model.createGraph(5);
+		System.out.println(String.format("**Grafo creato**\n" + (System.currentTimeMillis()-start)));
+		System.out.println(String.format("**Rispettivamente vertici: "+model.getGrafo().vertexSet().size()+" e archi: "+model.getGrafo().edgeSet().size()+"**\n"));
 		
-		List<String> vicini = model.displayNeighbours("casa");
+		List<String> vicini = model.displayNeighbours("santo");
 		System.out.println("Neighbours di casa: " + vicini + "\n");
 		
 		System.out.println("Cerco il vertice con grado massimo...");
