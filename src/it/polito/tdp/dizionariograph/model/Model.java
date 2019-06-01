@@ -110,15 +110,6 @@ public class Model {
     
     for(String vertice : this.grafo.vertexSet()) {
     
-    	
-    	//System.out.println();
-    	//System.out.println(vertice);  
-    	//System.out.println();
-        
-    	
-    	
-    	
-    	
     	 for(int i=0; i<numeroLettere;i++) {
     	   	
     		 char car[] = vertice.toCharArray();
@@ -131,16 +122,12 @@ public class Model {
     		    	   this.grafo.addEdge(vertice, cerco); 
     		    	   
     		       }
-    		  }
-    	}
-         
-    	   
+    		   }
+    	   }	   
     	
-    	
-    }
-    
-		
-	}
+       }
+  	
+   }
 
 	
 	public List <String> displayNeighbours(String parolaInserita) {
